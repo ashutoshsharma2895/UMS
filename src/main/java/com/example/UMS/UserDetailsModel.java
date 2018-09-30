@@ -13,34 +13,34 @@ public class UserDetailsModel {
 	private String address;
 	private String gender;
 	
-	private Integer getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
-	private void setUserId(Integer userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
-	private String getName() {
+	public String getName() {
 		return name;
 	}
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	private String getEmailId() {
+	public String getEmailId() {
 		return emailId;
 	}
-	private void setEmailId(String emailId) {
+	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	private String getAddress() {
+	public String getAddress() {
 		return address;
 	}
-	private void setAddress(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	private String getGender() {
+	public String getGender() {
 		return gender;
 	}
-	private void setGender(String gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	
