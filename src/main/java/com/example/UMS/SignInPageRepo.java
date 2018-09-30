@@ -8,4 +8,5 @@ public interface SignInPageRepo extends CrudRepository<UserDetailsModel,String>{
 	
 
 	List<UserDetailsModel> getAlluserId();
+	
 }
