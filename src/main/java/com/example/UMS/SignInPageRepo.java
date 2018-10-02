@@ -4,8 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface SignInPageRepo extends CrudRepository<UserDetailsModel,String>{
+public interface SignInPageRepo extends CrudRepository<UserDetailsModel,Integer>{
 	
-
-	List<UserDetailsModel> getAlluserId();
+	
 }

@@ -1,16 +1,23 @@
 package com.example.UMS;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SignInService {
 
 	@Autowired
 	private SignInPageRepo signInRepo;
 	
-	List<UserDetailsModel> getUsers()
+	UserDetailsModel putUsers(UserDetailsModel userDetailModel)
 	{
-		return signInRepo.getAlluserId();
+		return signInRepo.save(userDetailModel);
+	}
+	
+	Optional<UserDetailsModel> getUsers(Integer x)
+	{
+		return signInRepo.findById(x);
 	}
 }
