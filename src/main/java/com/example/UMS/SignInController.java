@@ -13,15 +13,15 @@ public class SignInController {
 	@Autowired
 	SignInService signInService;
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/SignInDetails")
+	@RequestMapping(method = RequestMethod.POST, value = "/SignUpDetails")
 	
-	UserDetailsModel enterUserDetails(@RequestBody UserDetailsModel userDetailsModel) {
-		return signInService.putUsers(userDetailsModel);
+	UserDetailsModel getUserDetails(@RequestBody UserDetailsModel userDetailsModel) {
+		return signInService.saveUser(userDetailsModel);
 	}
 	
     @RequestMapping(method = RequestMethod.GET, value = "/Sign", produces = "application/json")
 	
 	Optional<UserDetailsModel> getDetails() {
-		return signInService.getUsers(1);
+		return signInService.getUsers(3);
 	}
 }

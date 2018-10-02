@@ -1,13 +1,24 @@
 package com.example.UMS;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name= "user")
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity(name="user")
+@EntityListeners(AuditingEntityListener.class)
 public class UserDetailsModel {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="userid")
 	private Integer userId;
 	@Column(name="first_name")
@@ -28,10 +39,12 @@ public class UserDetailsModel {
 	private String phoneNo;
 	@Column(name="password")
 	private String password;
+	@CreatedDate
 	@Column(name="created_at")
-	private String createdAt;
+	private long createdat;
+	@LastModifiedDate
 	@Column(name="updated_at")
-	private String updatedAt;
+	private long updatedat;
 	
 	public Integer getUserId() {
 		return userId;
@@ -96,17 +109,17 @@ public class UserDetailsModel {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCreated_at() {
-		return createdAt;
+	public long getCreated_at() {
+		return createdat;
 	}
-	public void setCreated_at(String created_at) {
-		this.createdAt = created_at;
+	public void setCreated_at(long createdat) {
+		this.createdat = createdat;
 	}
-	public String getUpdated_at() {
-		return updatedAt;
+	public long getUpdated_at() {
+		return updatedat;
 	}
-	public void setUpdated_at(String updated_at) {
-		this.updatedAt = updated_at;
+	public void setUpdated_at(long updatedat) {
+		this.updatedat = updatedat;
 	}
 	
 	

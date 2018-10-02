@@ -11,9 +11,10 @@ public class SignInService {
 	@Autowired
 	private SignInPageRepo signInRepo;
 	
-	UserDetailsModel putUsers(UserDetailsModel userDetailModel)
+	UserDetailsModel saveUser(UserDetailsModel userDetailModel)
 	{
 		return signInRepo.save(userDetailModel);
+		
 	}
 	
 	Optional<UserDetailsModel> getUsers(Integer x)
