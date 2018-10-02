@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UmsApplication {
+public class UMSApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UmsApplication.class, args);
+		SpringApplication.run(UMSApplication.class, args);
 	}
 }
